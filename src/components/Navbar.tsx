@@ -4,8 +4,12 @@ import { useState, useEffect } from 'react';
 import { Sun, Moon, Menu, X, Code2 } from 'lucide-react';
 import { personalDetails } from '@/data/portfolioData';
 
-export default function Navbar() {
-  const [darkMode, setDarkMode] = useState(true);
+interface NavbarProps {
+  onOpenResume?: () => void;
+}
+
+export default function Navbar({ onOpenResume }: NavbarProps) {
+  const [darkMode, setDarkMode] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
 
   useEffect(() => {
@@ -42,14 +46,6 @@ export default function Navbar() {
           >
             {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
           </button>
-          <a
-            href={personalDetails.resumeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-5 py-2 rounded-full bg-orange-500 text-white font-semibold text-sm hover:bg-orange-600 shadow-lg shadow-orange-500/30 transition-all hover:scale-105"
-          >
-            Resume
-          </a>
         </div>
 
         <div className="md:hidden flex items-center space-x-3">
@@ -72,13 +68,15 @@ export default function Navbar() {
           <a href="#projects" onClick={() => setMobileMenu(false)}>Projects</a>
           <a href="#experience" onClick={() => setMobileMenu(false)}>Experience</a>
           <a href="#contact" onClick={() => setMobileMenu(false)}>Contact</a>
-          <a
-            href={personalDetails.resumeUrl}
-            target="_blank"
+          <button
+            onClick={() => {
+              setMobileMenu(false);
+              onOpenResume?.();
+            }}
             className="px-4 py-2 rounded-full bg-orange-500 text-white text-center font-semibold"
           >
-            Download Resume
-          </a>
+            Resume PDF
+          </button>
         </div>
       )}
     </nav>

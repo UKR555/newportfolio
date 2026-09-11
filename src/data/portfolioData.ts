@@ -76,7 +76,7 @@ export const workExperience = [
     company: "ParkNSecure Private Limited",
     role: "AI / ML Intern",
     location: "Bengaluru, India",
-    period: "May 2025 â€“ June 2025",
+    period: "May 2025 - June 2025",
     bullets: [
       "Architected an Automatic Number Plate Recognition (ANPR) and vehicle monitoring module for an AI-driven smart parking management system.",
       "Fine-tuned custom YOLOv8 detection models for vehicle localization and license plate bounding-box extraction, routing cropped OpenCV frames into a Tesseract OCR engine for text parsing.",
@@ -89,26 +89,58 @@ export const educationHistory = [
   {
     institution: "Gandhi Institute of Technology and Management (GITAM)",
     degree: "B.Tech in Computer Science & Engineering (AI & ML)",
-    period: "2022 â€“ 2026",
+    period: "2022 - 2026",
     score: "CGPA: 7.91 / 10.0"
   },
   {
     institution: "V.K.J PU College",
     degree: "Pre-University Education (PCMB)",
-    period: "2020 â€“ 2022",
+    period: "2020 - 2022",
     score: "Grade: 77.83%"
+  },
+  {
+    institution: "Vijay Marie School, Siruguppa",
+    degree: "Secondary School Certificate (10th Standard)",
+    period: "2019 - 2020",
+    score: "Grade: 89.76%"
   }
 ];
 
 export const certificationsList = [
   {
+    title: "AI-ML Virtual Internship",
+    issuer: "AWS Academy & EduSkills / AICTE",
+    period: "Sep 2023 - Nov 2023",
+    description: "Completed 10-week AI-ML Virtual Internship supported by AWS Academy, covering cloud AI technologies and machine learning workflows."
+  },
+  {
+    title: "Cybersecurity Virtual Internship",
+    issuer: "Palo Alto Networks & EduSkills / AICTE",
+    period: "Apr 2024 - Jun 2024",
+    description: "Completed 10-week Cybersecurity Virtual Internship supported by Palo Alto Networks, mastering core network security & threat prevention."
+  },
+  {
+    title: "Android Developer Virtual Internship",
+    issuer: "Google for Developers & EduSkills / AICTE",
+    period: "Jan 2024 - Mar 2024",
+    description: "Completed 10-week Android Developer Virtual Internship supported by Google for Developers, creating native Android apps."
+  },
+  {
+    title: "Aptitude Test Series - Grade A",
+    issuer: "Sanfoundry Global Education & Learning",
+    period: "May 2025 - Jul 2025",
+    description: "Secured Grade A (82% Marks) in the Aptitude Test Series for outstanding analytical & problem-solving performance. Cert No: T20250720113."
+  },
+  {
     title: "Smart India Hackathon (SIH)",
     issuer: "Ministry of Education / Govt of India",
+    period: "2024",
     description: "Selected for university hackathon team 'HARBINGERS'; engineered backend API contract rules and database integration layers."
   },
   {
     title: "MongoDB Administration Certification",
     issuer: "Infosys Springboard",
+    period: "2024",
     description: "Certified in document schema design, aggregation frameworks, indexing strategies, and CRUD operations."
   }
 ];

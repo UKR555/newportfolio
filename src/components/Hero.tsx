@@ -4,7 +4,11 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Download, Github, Linkedin, Mail, MapPin, Sparkles, ShieldCheck } from 'lucide-react';
 import { personalDetails } from '@/data/portfolioData';
 
-export default function Hero() {
+interface HeroProps {
+  onOpenResume?: () => void;
+}
+
+export default function Hero({ onOpenResume }: HeroProps) {
   return (
     <section id="hero" className="min-h-screen pt-28 pb-16 flex items-center justify-center relative overflow-hidden">
       <div className="absolute top-20 left-10 w-96 h-96 bg-orange-500/15 rounded-full blur-3xl pointer-events-none" />
@@ -39,7 +43,7 @@ export default function Hero() {
               <MapPin className="w-4 h-4 text-orange-500" />
               <span>{personalDetails.location}</span>
             </span>
-            <span>â€¢</span>
+            <span>•</span>
             <span className="flex items-center space-x-1">
               <ShieldCheck className="w-4 h-4 text-emerald-500" />
               <span>GITAM B.Tech CSE ('26)</span>
@@ -62,15 +66,13 @@ export default function Hero() {
               View Projects
             </a>
 
-            <a
-              href={personalDetails.resumeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3.5 rounded-full border border-orange-500/40 text-orange-500 hover:bg-orange-500/10 font-semibold text-sm flex items-center space-x-2 transition-all"
+            <button
+              onClick={onOpenResume}
+              className="px-6 py-3.5 rounded-full border border-orange-500/40 text-orange-500 hover:bg-orange-500/10 font-semibold text-sm flex items-center space-x-2 transition-all cursor-pointer"
             >
               <Download className="w-4 h-4" />
               <span>Resume PDF</span>
-            </a>
+            </button>
           </div>
 
           <div className="flex items-center space-x-5 pt-4">
@@ -100,26 +102,6 @@ export default function Hero() {
                 alt={personalDetails.name}
                 className="w-full h-full object-cover"
               />
-            </div>
-
-            <div className="absolute -top-4 -left-4 glass-card px-4 py-2.5 rounded-2xl shadow-xl flex items-center space-x-3 border border-orange-500/30 animate-float">
-              <div className="w-8 h-8 rounded-xl bg-orange-500 flex items-center justify-center text-white font-bold text-xs">
-                AI
-              </div>
-              <div>
-                <p className="text-xs font-bold">ParkNSecure</p>
-                <p className="text-[10px] text-slate-400">AI / ML Intern</p>
-              </div>
-            </div>
-
-            <div className="absolute -bottom-4 -right-4 glass-card px-4 py-2.5 rounded-2xl shadow-xl flex items-center space-x-3 border border-orange-500/30 animate-float" style={{ animationDelay: '1.5s' }}>
-              <div className="w-8 h-8 rounded-xl bg-emerald-500 flex items-center justify-center text-white font-bold text-xs">
-                SIH
-              </div>
-              <div>
-                <p className="text-xs font-bold">Hackathon Team</p>
-                <p className="text-[10px] text-slate-400">'HARBINGERS'</p>
-              </div>
             </div>
           </div>
         </motion.div>

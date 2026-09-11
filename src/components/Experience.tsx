@@ -65,9 +65,18 @@ export default function Experience() {
 
               {certificationsList.map((cert, cIdx) => (
                 <div key={cIdx} className="glass-card p-5 rounded-2xl space-y-1">
-                  <h5 className="font-bold text-sm">{cert.title}</h5>
-                  <p className="text-xs text-orange-500 font-semibold">{cert.issuer}</p>
-                  <p className="text-xs text-slate-600 dark:text-slate-400">{cert.description}</p>
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <h5 className="font-bold text-sm">{cert.title}</h5>
+                      <p className="text-xs text-orange-500 font-semibold">{cert.issuer}</p>
+                    </div>
+                    {cert.period && (
+                      <span className="text-[11px] px-2.5 py-0.5 rounded-full bg-slate-200 dark:bg-slate-800 font-medium text-slate-600 dark:text-slate-400 flex-shrink-0 ml-2">
+                        {cert.period}
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-xs text-slate-600 dark:text-slate-400 pt-1">{cert.description}</p>
                 </div>
               ))}
             </div>

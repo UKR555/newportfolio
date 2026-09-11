@@ -49,10 +49,11 @@ export default function AIAssistant() {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 p-4 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-2xl hover:scale-110 transition-all flex items-center space-x-2 font-semibold text-sm group"
+        title="Ask AI Recruiter"
+        aria-label="Ask AI Recruiter"
+        className="fixed bottom-6 right-6 z-50 w-11 h-11 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg hover:scale-110 transition-all flex items-center justify-center group"
       >
-        <Bot className="w-6 h-6 animate-pulse" />
-        <span className="hidden sm:inline">Ask AI Recruiter</span>
+        <Bot className="w-5 h-5" />
       </button>
 
       {isOpen && (
