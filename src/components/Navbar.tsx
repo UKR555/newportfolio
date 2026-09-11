@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Sun, Moon, Terminal, Menu, X, Code2 } from 'lucide-react';
+import { Sun, Moon, Menu, X, Code2 } from 'lucide-react';
 import { personalDetails } from '@/data/portfolioData';
 
 export default function Navbar() {
@@ -26,7 +26,6 @@ export default function Navbar() {
           <span>CH <span className="orange-gradient-text">Udaya Kumar</span></span>
         </a>
 
-        {/* Desktop Nav Links */}
         <div className="hidden md:flex items-center space-x-8 text-sm font-medium">
           <a href="#about" className="hover:text-orange-500 transition-colors">About</a>
           <a href="#skills" className="hover:text-orange-500 transition-colors">Skills</a>
@@ -35,7 +34,6 @@ export default function Navbar() {
           <a href="#contact" className="hover:text-orange-500 transition-colors">Contact</a>
         </div>
 
-        {/* Actions */}
         <div className="hidden md:flex items-center space-x-4">
           <button
             onClick={() => setDarkMode(!darkMode)}
@@ -54,7 +52,6 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Toggle */}
         <div className="md:hidden flex items-center space-x-3">
           <button
             onClick={() => setDarkMode(!darkMode)}
@@ -68,7 +65,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Drawer */}
       {mobileMenu && (
         <div className="md:hidden mt-4 pt-4 border-t border-slate-700 flex flex-col space-y-4 px-2 pb-4">
           <a href="#about" onClick={() => setMobileMenu(false)}>About</a>

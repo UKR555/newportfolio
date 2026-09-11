@@ -19,20 +19,22 @@ export default function Skills() {
           </p>
         </div>
 
-        {/* Category Tabs */}
         <div className="flex flex-wrap justify-center gap-3 mb-10">
           {skillsCategories.map((cat, idx) => (
             <button
               key={idx}
               onClick={() => setActiveTab(idx)}
-              className={px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold transition-all }
+              className={`px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold transition-all ${
+                activeTab === idx
+                  ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/30 scale-105'
+                  : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:border-orange-500/40 border border-transparent'
+              }`}
             >
               {cat.name}
             </button>
           ))}
         </div>
 
-        {/* Skill Badges */}
         <motion.div
           key={activeTab}
           initial={{ opacity: 0, y: 15 }}

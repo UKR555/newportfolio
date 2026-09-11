@@ -18,7 +18,6 @@ export default function Experience() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Work Experience */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3 mb-6">
               <div className="p-3 rounded-2xl bg-orange-500 text-white shadow-lg shadow-orange-500/30">
@@ -56,7 +55,6 @@ export default function Experience() {
               </motion.div>
             ))}
 
-            {/* Certifications */}
             <div className="pt-6 space-y-4">
               <div className="flex items-center space-x-3 mb-4">
                 <div className="p-2.5 rounded-xl bg-amber-500 text-white">
@@ -75,7 +73,6 @@ export default function Experience() {
             </div>
           </div>
 
-          {/* Education History */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3 mb-6">
               <div className="p-3 rounded-2xl bg-blue-500 text-white shadow-lg shadow-blue-500/30">

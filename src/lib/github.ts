@@ -13,12 +13,12 @@ export interface GitHubRepo {
 
 export async function fetchLiveGitHubRepos(username: string): Promise<GitHubRepo[]> {
   try {
-    const res = await fetch(https://api.github.com/users//repos?sort=updated&per_page=12, {
+    const res = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=12`, {
       headers: {
         'Accept': 'application/vnd.github.v3+json',
         'User-Agent': 'AGY-Portfolio-AutoSync'
       },
-      next: { revalidate: 3600 } // revalidate hourly
+      next: { revalidate: 3600 }
     });
     
     if (!res.ok) return [];

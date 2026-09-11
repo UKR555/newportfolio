@@ -1,6 +1,6 @@
 'use client';
 
-import { Mail, Phone, MapPin, Linkedin, Github, Send, Copy, Check } from 'lucide-react';
+import { Mail, Phone, Linkedin, Copy, Check } from 'lucide-react';
 import { useState } from 'react';
 import { personalDetails } from '@/data/portfolioData';
 
@@ -26,9 +26,8 @@ export default function Contact() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          {/* Email Card */}
           <a
-            href={mailto:}
+            href={`mailto:${personalDetails.email}`}
             className="glass-card p-6 rounded-3xl flex flex-col items-center text-center space-y-3 hover:border-orange-500/50 transition-all hover:scale-105"
           >
             <div className="p-3 rounded-2xl bg-orange-500/10 text-orange-500">
@@ -38,7 +37,6 @@ export default function Contact() {
             <p className="text-xs text-slate-500 dark:text-slate-400">{personalDetails.email}</p>
           </a>
 
-          {/* Phone Card */}
           <button
             onClick={copyPhone}
             className="glass-card p-6 rounded-3xl flex flex-col items-center text-center space-y-3 hover:border-orange-500/50 transition-all hover:scale-105"
@@ -53,7 +51,6 @@ export default function Contact() {
             <p className="text-xs text-slate-500 dark:text-slate-400">{personalDetails.phone}</p>
           </button>
 
-          {/* LinkedIn Card */}
           <a
             href={personalDetails.linkedin}
             target="_blank"

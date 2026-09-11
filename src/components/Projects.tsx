@@ -34,7 +34,6 @@ export default function Projects() {
           </p>
         </div>
 
-        {/* Deep-Dive Resume Projects Grid */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {featuredProjects.map((project, idx) => (
             <motion.div
@@ -90,7 +89,6 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Live Auto-Synced GitHub Repos Section */}
         <div className="pt-10 border-t border-slate-200 dark:border-slate-800">
           <div className="flex items-center justify-between mb-8">
             <div>
