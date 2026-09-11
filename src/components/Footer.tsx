@@ -1,4 +1,4 @@
-﻿import { personalDetails } from '@/data/portfolioData';
+import { personalDetails } from '@/data/portfolioData';
 
 export default function Footer() {
   return (

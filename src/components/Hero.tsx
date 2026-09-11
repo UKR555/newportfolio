@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import { ArrowRight, Download, Github, Linkedin, Mail, MapPin, Sparkles, ShieldCheck } from 'lucide-react';

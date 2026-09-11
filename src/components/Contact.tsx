@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { Mail, Phone, MapPin, Linkedin, Github, Send, Copy, Check } from 'lucide-react';
 import { useState } from 'react';

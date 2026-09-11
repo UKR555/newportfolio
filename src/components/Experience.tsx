@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import { Briefcase, GraduationCap, Award, CheckCircle2 } from 'lucide-react';

@@ -1,4 +1,4 @@
-﻿export const personalDetails = {
+export const personalDetails = {
   name: "CH Udaya Kumar",
   title: "AI / ML Engineer & Software Development Engineer (SDE)",
   taglines: [

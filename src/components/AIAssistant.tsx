@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState } from 'react';
 import { Bot, X, Send, Sparkles, User, CheckCircle } from 'lucide-react';
